@@ -38,7 +38,17 @@ var kmApi = (function () {
             } else {
                 throw 'please, input a string';
             }
-        }
+        };
+
+        var _textToMd5 = function (text) {
+            if (typeof text === 'string') {
+                var hashHex = md5(text);
+                return hashHex;
+            } else {
+                throw 'please, input a string';
+            }
+        };
+        
         var _hexToSha1 = function (hexText) {
             if (typeof hexText === 'string') {
                 var shaObj = new jsSHA(hexText, "HEX");
@@ -50,7 +60,8 @@ var kmApi = (function () {
         }
         return {
             sha1: _textToSha1,
-            hexToSha1: _hexToSha1
+            hexToSha1: _hexToSha1,
+            md5: _textToMd5
         }
     })();
 
