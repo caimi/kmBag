@@ -10,9 +10,4 @@
   "license": "MIT",
   "homepage": "https://github.com/caimi/kmBag/",
   "private": true
-  
-  "dependencies": {
-        "jsSHA": "*",
-        "blueimp-md5": "*"
-    }
 }
